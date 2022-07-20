@@ -1,7 +1,9 @@
 export default function Start() {
   return (
     <div className="firstPage">
-      <img className="logo" src="images/logo"></img>
+      <div className="logo">
+        <img src="images/logo.png"></img>
+      </div>
       <h1 className="title">ZapRecall</h1>
       <div className="startButton">Iniciar Recall!</div>
     </div>

@@ -1,7 +1,59 @@
 body {
   font-family: "Recursive", sans-serif;
+  box-sizing: border-box;
+}
+
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fb6b6b;
+}
+.firstPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   font-family: "Righteous", cursive;
+  font-size: 36px;
+  color: white;
+}
+
+.firstPage .logo {
+  width: 136px;
+  height: 161px;
+  object-fit: cover;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.title {
+  margin: 30px 0;
+}
+
+.startButton {
+  width: 246px;
+  height: 54px;
+
+  background-color: white;
+
+  font-size: 18px;
+  color: #d70900;
+
+  border: solid 1px #d70900;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.2);
 }
