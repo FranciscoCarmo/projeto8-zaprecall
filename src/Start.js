@@ -15,6 +15,7 @@ export default function Start({ setStartRecall, arrayDecks, setdeckSelected }) {
         className="select"
         options={arrayDecks}
         onChange={(e) => handleAddrTypeChange(e)}
+        placeholder="Escolha seu deck:"
       />
       <div className="startButton" onClick={() => setStartRecall(true)}>
         Iniciar Recall!
