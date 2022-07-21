@@ -24,6 +24,7 @@ export default function OneQuestion({
         <div className="question closed ">
           <p>Pergunta {index + 1}</p>
           <CaretForwardOutline
+            className="seta"
             onClick={() => setIsOpen(true)}
             color={"#00000"}
             height="30px"

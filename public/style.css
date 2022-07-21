@@ -99,6 +99,10 @@ h1 {
   font-size: 16px;
 }
 
+.question .seta {
+  cursor: pointer;
+}
+
 .question.front,
 .question.back {
   min-height: 131px;
@@ -115,6 +119,7 @@ h1 {
 
   bottom: 10px;
   right: 10px;
+  cursor: pointer;
 }
 
 .question p {
@@ -265,12 +270,42 @@ h1 {
 
 .minPoints {
   height: 42px;
-  width: 195px;
+  width: 170px;
   margin-bottom: 15px;
   border: solid 1px #e8e8e8;
   border-radius: 5px;
+
+  color: #fb6b6b;
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.minPoints::placeholder {
+  color: #c0c0c0;
+  font-size: 12px;
 }
 
 .hidden {
   display: none !important;
+}
+
+@media (max-width: 614px) {
+  .question {
+    width: 567px;
+    height: 91px;
+
+    /* padding: 0 20px; */
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.2);
+
+    font-weight: bold;
+    font-size: 24px;
+  }
 }
