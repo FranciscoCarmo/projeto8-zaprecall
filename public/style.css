@@ -253,6 +253,10 @@ h1 {
   cursor: pointer;
 }
 
+.select {
+  margin: 15px 0;
+}
+
 .hidden {
   display: none !important;
 }
