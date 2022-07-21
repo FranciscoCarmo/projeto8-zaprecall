@@ -4,7 +4,7 @@ import Header from "./Header";
 import Questions from "./Questions";
 import LowerMenu from "./LowerMenu";
 
-export default function QuestionsPage() {
+export default function QuestionsPage({ resetStartRecall }) {
   const questionList = [
     {
       Q: "O que é JSX?",
@@ -44,6 +44,11 @@ export default function QuestionsPage() {
   const numberQuestions = questionList.length;
   const [arrayEmotes, setArrayEmotes] = React.useState([]);
 
+  function resetQuestionsPage() {
+    resetStartRecall();
+    setNumberAnswer(0);
+    setArrayEmotes([]);
+  }
   return (
     <div className="questionsPage">
       <Header />
@@ -58,6 +63,7 @@ export default function QuestionsPage() {
         numberAnswer={numberAnswer}
         numberQuestions={numberQuestions}
         arrayEmotes={arrayEmotes}
+        resetQuestionsPage={resetQuestionsPage}
       />
     </div>
   );

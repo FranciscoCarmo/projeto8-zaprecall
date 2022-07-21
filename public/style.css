@@ -233,6 +233,26 @@ h1 {
   margin-right: 5px;
 }
 
+.resetButton {
+  width: 167px;
+  height: 32px;
+
+  border-radius: 5px;
+  background-color: #fb6b6b;
+  box-shadow: 0 2px 2px 2px rgb(0, 0, 0, 0.2);
+
+  margin: 15px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
 .hidden {
   display: none !important;
 }
