@@ -125,14 +125,13 @@ h1 {
 .question.back {
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 
 .buttonSection {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
-  margin-bottom: 15px;
 }
 
 .answerButton {
