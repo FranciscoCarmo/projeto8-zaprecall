@@ -4,7 +4,11 @@ import Header from "./Header";
 import Questions from "./Questions";
 import LowerMenu from "./LowerMenu";
 
-export default function QuestionsPage({ resetStartRecall, deckSelected }) {
+export default function QuestionsPage({
+  resetStartRecall,
+  deckSelected,
+  minPoints,
+}) {
   const questionList = deckSelected;
 
   const [numberAnswer, setNumberAnswer] = React.useState(0);
@@ -31,6 +35,7 @@ export default function QuestionsPage({ resetStartRecall, deckSelected }) {
         numberQuestions={numberQuestions}
         arrayEmotes={arrayEmotes}
         resetQuestionsPage={resetQuestionsPage}
+        minPoints={minPoints}
       />
     </div>
   );

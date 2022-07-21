@@ -128,6 +128,7 @@ export default function App() {
   const [startRecall, setStartRecall] = React.useState(false);
 
   const [deckSelected, setdeckSelected] = React.useState(questionListReact);
+  const [minPoints, setMinPoints] = React.useState(0);
 
   function resetStartRecall() {
     setStartRecall(false);
@@ -138,6 +139,7 @@ export default function App() {
       <QuestionsPage
         resetStartRecall={resetStartRecall}
         deckSelected={deckSelected}
+        minPoints={minPoints}
       />
     );
   } else {
@@ -146,6 +148,8 @@ export default function App() {
         setStartRecall={setStartRecall}
         arrayDecks={arrayDecks}
         setdeckSelected={setdeckSelected}
+        minPoints={minPoints}
+        setMinPoints={setMinPoints}
       />
     );
   }

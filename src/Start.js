@@ -1,6 +1,14 @@
 import Select from "react-select";
+import React from "react";
+import StartButton from "./StartButton";
 
-export default function Start({ setStartRecall, arrayDecks, setdeckSelected }) {
+export default function Start({
+  setStartRecall,
+  arrayDecks,
+  setdeckSelected,
+  minPoints,
+  setMinPoints,
+}) {
   function handleAddrTypeChange(e) {
     setdeckSelected(e.value);
   }
@@ -17,9 +25,16 @@ export default function Start({ setStartRecall, arrayDecks, setdeckSelected }) {
         onChange={(e) => handleAddrTypeChange(e)}
         placeholder="Escolha seu deck:"
       />
-      <div className="startButton" onClick={() => setStartRecall(true)}>
-        Iniciar Recall!
-      </div>
+      <input
+        className="minPoints"
+        type="text"
+        placeholder="Digite sua meta de zaps: (1-8)"
+        onChange={(e) => {
+          setMinPoints(e.target.value);
+          console.log(e.target.value);
+        }}
+      ></input>
+      <StartButton minPoints={minPoints} setStartRecall={setStartRecall} />
     </div>
   );
 }

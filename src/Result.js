@@ -1,4 +1,4 @@
-export default function Result({ isEnd, isCorrect }) {
+export default function Result({ isEnd, isCorrect, minPoints }) {
   if (isEnd == true) {
     if (isCorrect) {
       return (

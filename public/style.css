@@ -54,6 +54,12 @@ h1 {
   cursor: pointer;
 }
 
+.startButton.disallowed {
+  border: none;
+  background-color: #e8e8e8;
+  color: #c0c0c0;
+}
+
 .questionsPage {
   display: flex;
   align-items: center;
@@ -255,6 +261,14 @@ h1 {
 
 .select {
   margin: 15px 0;
+}
+
+.minPoints {
+  height: 42px;
+  width: 195px;
+  margin-bottom: 15px;
+  border: solid 1px #e8e8e8;
+  border-radius: 5px;
 }
 
 .hidden {

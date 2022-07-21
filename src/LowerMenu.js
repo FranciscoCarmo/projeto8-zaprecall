@@ -8,6 +8,7 @@ export default function LowerMenu({
   numberQuestions,
   arrayEmotes,
   resetQuestionsPage,
+  minPoints,
 }) {
   // const [isEnd, setIsEnd] = React.useState(false);
   let isEnd = false;
@@ -15,13 +16,17 @@ export default function LowerMenu({
 
   if (numberAnswer === numberQuestions) {
     isEnd = true;
-    if (arrayEmotes.includes("images/cross.png")) {
+
+    if (
+      arrayEmotes.filter((x) => x === "images/cross.png").length >
+      8 - minPoints
+    ) {
       isCorrect = false;
     }
   }
   return (
     <div className="lowerMenu">
-      <Result isEnd={isEnd} isCorrect={isCorrect} />
+      <Result isEnd={isEnd} isCorrect={isCorrect} minPoints={minPoints} />
       {numberAnswer}/{numberQuestions} CONCLUÍDOS
       <Emotes arrayEmotes={arrayEmotes} />
       <ResetButtom isEnd={isEnd} resetQuestionsPage={resetQuestionsPage} />
