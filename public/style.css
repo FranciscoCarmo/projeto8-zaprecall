@@ -187,6 +187,7 @@ h1 {
   width: 100%;
   min-height: 70px;
   padding-top: 5px;
+  padding-bottom: 5px;
 
   background-color: white;
 
@@ -212,6 +213,23 @@ h1 {
   width: 18px;
 
   margin: 0 3px;
+}
+.resultado {
+  margin: 10px 5px;
+  padding: 0 50px;
+  word-break: normal;
+  text-align: center;
+}
+
+.parabens {
+  display: flex;
+  justify-content: center;
+
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.parabens img {
+  margin-right: 5px;
 }
 
 .hidden {
