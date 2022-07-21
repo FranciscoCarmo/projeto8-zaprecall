@@ -308,4 +308,24 @@ h1 {
     font-weight: bold;
     font-size: 24px;
   }
+
+  .question .seta {
+    width: 40px;
+  }
+
+  h1 {
+    font-size: 64px;
+    color: white;
+  }
+
+  .header img {
+    margin-right: 15px;
+    width: 87px;
+    height: 100px;
+  }
+
+  .answerButton {
+    width: calc(85px * 1.8);
+    height: 37px;
+  }
 }
