@@ -1,27 +1,115 @@
+import React from "react";
 import { CaretForwardOutline } from "react-ionicons";
 
-export default function OneQuestion() {
-  return (
-    <>
-      {/* Passar essas seções para commponente */}
-      <div className="question closed ">
-        <p>Pergunta 1</p>
-        <CaretForwardOutline color={"#00000"} height="30px" width="30px" />{" "}
-      </div>
+export default function OneQuestion({
+  Q,
+  R,
+  index,
+  numberAnswers,
+  setNumberAnswers,
+}) {
+  // console.log(Q);
+  // console.log(index);
+  // console.log(numberAnswers);
 
-      <div className="question front hidden">
-        <p>O que é JSX?</p>
-        <img src="images/setinha.png"></img>
-      </div>
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isFlipped, setIsFlipped] = React.useState(false);
+  const [answer, setAnswer] = React.useState("");
 
-      <div className="question back hidden">
-        <p>É um trem de programação difícil demaisss</p>
+  if (!isOpen) {
+    if (answer === "") {
+      return (
+        <div className="question closed ">
+          <p>Pergunta {index + 1}</p>
+          <CaretForwardOutline
+            onClick={() => setIsOpen(true)}
+            color={"#00000"}
+            height="30px"
+            width="30px"
+          />{" "}
+        </div>
+      );
+    }
+    // Se errar
+    if (answer === "bad") {
+      return (
+        <div className="question closed answered bad">
+          <p>Pergunta {index + 1}</p>
+          <img src="images/cross.png"></img>
+        </div>
+      );
+    }
+
+    // Se dúvida
+    if (answer === "neutral") {
+      return (
+        <div className="question closed answered neutral">
+          <p>Pergunta {index + 1}</p>
+          <img src="images/question.png"></img>
+        </div>
+      );
+    }
+
+    // Se acertar
+    if (answer === "good") {
+      return (
+        <div className="question closed answered good">
+          <p>Pergunta {index + 1}</p>
+          <img src="images/correct.png"></img>
+        </div>
+      );
+    }
+  }
+
+  if (isOpen && !isFlipped) {
+    return (
+      <div className="question front ">
+        <p>{Q}</p>
+        <img src="images/setinha.png" onClick={() => setIsFlipped(true)}></img>
+      </div>
+    );
+  }
+
+  if (isOpen && isFlipped) {
+    return (
+      <div className="question back ">
+        <p>{R}</p>
         <div className="buttonSection">
-          <div className="answerButton red">Não lembrei</div>
-          <div className="answerButton yellow">Quase não lembrei </div>
-          <div className="answerButton green">Zap!</div>
+          <div
+            className="answerButton red"
+            onClick={() => {
+              setIsOpen(false);
+              setIsFlipped(false);
+              setAnswer("bad");
+              setNumberAnswers(numberAnswers + 1);
+            }}
+          >
+            Não lembrei
+          </div>
+          <div
+            className="answerButton yellow"
+            onClick={() => {
+              setIsOpen(false);
+              setIsFlipped(false);
+              setAnswer("neutral");
+              setNumberAnswers(numberAnswers + 1);
+            }}
+          >
+            Quase não lembrei{" "}
+          </div>
+          <div
+            className="answerButton green"
+            onClick={() => {
+              setIsOpen(false);
+              setIsFlipped(false);
+              setAnswer("good");
+              setNumberAnswers(numberAnswers + 1);
+            }}
+          >
+            Zap!
+          </div>
         </div>
       </div>
-    </>
-  );
+    );
+  }
 }

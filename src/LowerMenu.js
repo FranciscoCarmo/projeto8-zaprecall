@@ -1,3 +1,7 @@
-export default function LowerMenu() {
-  return <div className="lowerMenu">0/4 CONCLUÍDO</div>;
+export default function LowerMenu({ numberAnswer, numberQuestions }) {
+  return (
+    <div className="lowerMenu">
+      {numberAnswer}/{numberQuestions} CONCLUÍDO
+    </div>
+  );
 }
