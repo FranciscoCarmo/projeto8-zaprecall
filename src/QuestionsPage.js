@@ -42,9 +42,7 @@ export default function QuestionsPage() {
 
   const [numberAnswer, setNumberAnswer] = React.useState(0);
   const numberQuestions = questionList.length;
-  console.log(numberQuestions);
-  console.log(numberAnswer);
-  console.log(setNumberAnswer);
+  const [arrayEmotes, setArrayEmotes] = React.useState([]);
 
   return (
     <div className="questionsPage">
@@ -53,10 +51,13 @@ export default function QuestionsPage() {
         questionList={questionList}
         numberAnswer={numberAnswer}
         setNumberAnswer={setNumberAnswer}
+        arrayEmotes={arrayEmotes}
+        setArrayEmotes={setArrayEmotes}
       />
       <LowerMenu
         numberAnswer={numberAnswer}
         numberQuestions={numberQuestions}
+        arrayEmotes={arrayEmotes}
       />
     </div>
   );

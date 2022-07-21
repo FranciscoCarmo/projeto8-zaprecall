@@ -4,6 +4,8 @@ export default function Questions({
   questionList,
   numberAnswer,
   setNumberAnswer,
+  arrayEmotes,
+  setArrayEmotes,
 }) {
   function shuffle(array) {
     let currentIndex = array.length,
@@ -38,6 +40,8 @@ export default function Questions({
             index={key}
             numberAnswers={numberAnswer}
             setNumberAnswers={setNumberAnswer}
+            arrayEmotes={arrayEmotes}
+            setArrayEmotes={setArrayEmotes}
           />
         );
       })}

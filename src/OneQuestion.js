@@ -7,6 +7,8 @@ export default function OneQuestion({
   index,
   numberAnswers,
   setNumberAnswers,
+  arrayEmotes,
+  setArrayEmotes,
 }) {
   // console.log(Q);
   // console.log(index);
@@ -82,6 +84,8 @@ export default function OneQuestion({
               setIsFlipped(false);
               setAnswer("bad");
               setNumberAnswers(numberAnswers + 1);
+              arrayEmotes.push("images/cross.png");
+              setArrayEmotes([...arrayEmotes]);
             }}
           >
             Não lembrei
@@ -93,6 +97,8 @@ export default function OneQuestion({
               setIsFlipped(false);
               setAnswer("neutral");
               setNumberAnswers(numberAnswers + 1);
+              arrayEmotes.push("images/question.png");
+              setArrayEmotes([...arrayEmotes]);
             }}
           >
             Quase não lembrei{" "}
@@ -104,6 +110,8 @@ export default function OneQuestion({
               setIsFlipped(false);
               setAnswer("good");
               setNumberAnswers(numberAnswers + 1);
+              arrayEmotes.push("images/correct.png");
+              setArrayEmotes([...arrayEmotes]);
             }}
           >
             Zap!
