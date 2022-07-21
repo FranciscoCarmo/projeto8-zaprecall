@@ -16,11 +16,14 @@ export default function LowerMenu({
 
   if (numberAnswer === numberQuestions) {
     isEnd = true;
-
-    if (
-      arrayEmotes.filter((x) => x === "images/cross.png").length >
-      8 - minPoints
-    ) {
+    if (numberQuestions >= minPoints) {
+      if (
+        arrayEmotes.filter((x) => x === "images/cross.png").length >
+        numberQuestions - minPoints
+      ) {
+        isCorrect = false;
+      }
+    } else if (arrayEmotes.includes("images/cross.png")) {
       isCorrect = false;
     }
   }

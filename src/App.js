@@ -140,6 +140,7 @@ export default function App() {
         resetStartRecall={resetStartRecall}
         deckSelected={deckSelected}
         minPoints={minPoints}
+        setMinPoints={setMinPoints}
       />
     );
   } else {

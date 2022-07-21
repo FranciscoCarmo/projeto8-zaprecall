@@ -72,6 +72,8 @@ h1 {
   display: flex;
   align-items: center;
   margin: 45px 0;
+
+  cursor: pointer;
 }
 
 .header img {

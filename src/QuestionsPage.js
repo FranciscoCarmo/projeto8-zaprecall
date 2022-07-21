@@ -8,6 +8,7 @@ export default function QuestionsPage({
   resetStartRecall,
   deckSelected,
   minPoints,
+  setMinPoints,
 }) {
   const questionList = deckSelected;
 
@@ -19,10 +20,11 @@ export default function QuestionsPage({
     resetStartRecall();
     setNumberAnswer(0);
     setArrayEmotes([]);
+    setMinPoints(0);
   }
   return (
     <div className="questionsPage">
-      <Header />
+      <Header resetQuestionsPage={resetQuestionsPage} />
       <Questions
         questionList={questionList}
         numberAnswer={numberAnswer}
