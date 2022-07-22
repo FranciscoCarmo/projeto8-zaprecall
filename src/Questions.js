@@ -37,6 +37,7 @@ export default function Questions({
           <OneQuestion
             Q={x.Q}
             R={x.R}
+            key={key}
             index={key}
             numberAnswers={numberAnswer}
             setNumberAnswers={setNumberAnswer}
