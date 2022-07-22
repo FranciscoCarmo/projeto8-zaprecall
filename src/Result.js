@@ -1,5 +1,5 @@
 export default function Result({ isEnd, isCorrect, minPoints }) {
-  if (isEnd == true) {
+  if (isEnd === true) {
     if (isCorrect) {
       return (
         <div className="resultado">
