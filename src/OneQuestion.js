@@ -9,6 +9,8 @@ export default function OneQuestion({
   setNumberAnswers,
   arrayEmotes,
   setArrayEmotes,
+  isOneCardFlipped,
+  setIsOneCardFlipped,
 }) {
   // console.log(Q);
   // console.log(index);
@@ -25,7 +27,12 @@ export default function OneQuestion({
           <p>Pergunta {index + 1}</p>
           <CaretForwardOutline
             className="seta"
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              if (!isOneCardFlipped) {
+                setIsOpen(true);
+                setIsOneCardFlipped(true);
+              }
+            }}
             color={"#00000"}
             height="30px"
             width="30px"
@@ -87,6 +94,7 @@ export default function OneQuestion({
               setNumberAnswers(numberAnswers + 1);
               arrayEmotes.push("images/cross.png");
               setArrayEmotes([...arrayEmotes]);
+              setIsOneCardFlipped(false);
             }}
           >
             Não lembrei
@@ -100,6 +108,7 @@ export default function OneQuestion({
               setNumberAnswers(numberAnswers + 1);
               arrayEmotes.push("images/question.png");
               setArrayEmotes([...arrayEmotes]);
+              setIsOneCardFlipped(false);
             }}
           >
             Quase não lembrei{" "}
@@ -113,6 +122,7 @@ export default function OneQuestion({
               setNumberAnswers(numberAnswers + 1);
               arrayEmotes.push("images/correct.png");
               setArrayEmotes([...arrayEmotes]);
+              setIsOneCardFlipped(false);
             }}
           >
             Zap!

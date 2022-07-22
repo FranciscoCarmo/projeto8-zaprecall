@@ -1,3 +1,4 @@
+import React from "react";
 import OneQuestion from "./OneQuestion";
 
 export default function Questions({
@@ -27,8 +28,7 @@ export default function Questions({
   // Embaralha as cartas
   shuffle(questionList);
 
-  // console.log(numberAnswers);
-  // console.log(setNumberAnswers);
+  const [isOneCardFlipped, setIsOneCardFlipped] = React.useState(false);
 
   return (
     <>
@@ -42,6 +42,8 @@ export default function Questions({
             setNumberAnswers={setNumberAnswer}
             arrayEmotes={arrayEmotes}
             setArrayEmotes={setArrayEmotes}
+            isOneCardFlipped={isOneCardFlipped}
+            setIsOneCardFlipped={setIsOneCardFlipped}
           />
         );
       })}

@@ -7,7 +7,7 @@ export default function Result({ isEnd, isCorrect, minPoints }) {
             <img src="images/party.png"></img>
             <p>Parabéns!</p>
           </div>
-          <p>Você não esqueceu de nenhum flashcard!</p>
+          <p>Você bateu sua meta de flashcards!!</p>
         </div>
       );
     }
