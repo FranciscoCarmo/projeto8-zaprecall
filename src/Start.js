@@ -28,7 +28,7 @@ export default function Start({
       <input
         className="minPoints"
         type="text"
-        placeholder="Digite sua meta de zaps: (min:1)"
+        placeholder="Digite sua meta de zaps:(min:1)"
         onChange={(e) => {
           setMinPoints(e.target.value);
           console.log(e.target.value);
