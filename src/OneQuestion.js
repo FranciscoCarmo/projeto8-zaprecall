@@ -1,5 +1,4 @@
 import React from "react";
-import { CaretForwardOutline } from "react-ionicons";
 
 export default function OneQuestion({
   Q,
@@ -25,7 +24,8 @@ export default function OneQuestion({
       return (
         <div className="question closed ">
           <p>Pergunta {index + 1}</p>
-          <CaretForwardOutline
+          <img
+            src="images/seta.png"
             className="seta"
             onClick={() => {
               if (!isOneCardFlipped) {
@@ -33,10 +33,7 @@ export default function OneQuestion({
                 setIsOneCardFlipped(true);
               }
             }}
-            color={"#00000"}
-            height="30px"
-            width="30px"
-          />{" "}
+          ></img>
         </div>
       );
     }
